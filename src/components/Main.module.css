@@ -1,0 +1,44 @@
+.main,
+.logo {
+  text-align: center;
+}
+
+.logo {
+  font-size: 2em;
+}
+
+.description {
+  margin-top: 20%;
+}
+.main__columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.main__img {
+  width: 100%;
+}
+
+.logo-main {
+  color: red;
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    font-size: 4em;
+  }
+
+  .main__columns {
+    flex-direction: row;
+  }
+
+  .main__column {
+    max-width: 60%;
+  }
+  .logo-main {
+    display: none;
+  }
+}

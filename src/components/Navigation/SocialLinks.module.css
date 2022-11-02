@@ -1,0 +1,15 @@
+.nav__socials {
+  background-color: transparent;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__socials {
+    display: none;
+  }
+}

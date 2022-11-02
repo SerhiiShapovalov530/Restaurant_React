@@ -1,0 +1,19 @@
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__name--active {
+  text-decoration: underline;
+  color: red;
+}
+
+.menu__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 500px;
+  max-width: 800px;
+}

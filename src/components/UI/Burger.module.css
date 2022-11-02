@@ -1,0 +1,57 @@
+.nav__burger {
+  position: fixed;
+  z-index: 3;
+  right: 5%;
+  top: 3%;
+  height: 26px;
+  width: 32px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.nav__bureger--active {
+  background-color: yellow;
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: 0.2s ease-out;
+}
+
+.bar__top {
+  top: 0;
+}
+.bar__middle {
+  top: 11px;
+}
+.bar__bottom {
+  top: 22px;
+}
+
+.bar__top--active {
+  transform-origin: center;
+  transform: translateY(11px) rotate(135deg);
+}
+
+.bar__middle--active {
+  top: 11px;
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.bar__bottom--active {
+  transform-origin: center;
+  transform: translateY(11px) rotate(-135deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__burger {
+    display: none;
+  }
+}

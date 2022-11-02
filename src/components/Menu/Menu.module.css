@@ -1,0 +1,20 @@
+.menu {
+  margin-top: 5%;
+  font-size: 3em;
+  text-align: center;
+}
+
+.menu__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item {
+  width: 85vw;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

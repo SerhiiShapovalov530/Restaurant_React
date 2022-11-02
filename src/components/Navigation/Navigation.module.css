@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(222, 222, 222, 0.6);
+}
+
+.nav__active {
+  position: fixed;
+  background-color: #161616;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: 0.2s ease-out;
+}
+
+.nav__inactive {
+  display: none;
+  transition: 0.2s ease-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav,
+  .nav__inactive,
+  .nav__active {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+    min-width: 1000px;
+
+    background-color: transparent;
+  }
+}
