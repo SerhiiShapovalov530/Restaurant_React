@@ -1,0 +1,40 @@
+.name {
+  text-align: center;
+}
+
+.menu__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.menu__column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu__item {
+  margin-top: 5%;
+}
+
+.item__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item__name {
+  margin-bottom: 1%;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu__items {
+    flex-direction: row;
+  }
+
+  .menu__column {
+    max-width: 45%;
+  }
+}

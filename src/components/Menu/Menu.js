@@ -48,17 +48,17 @@ const Menu = () => {
     <section className={`section section--3 ${styles["section--3"]}`}>
       <div className="content__container">
         <h2 className={`heading ${styles.menu}`}>Menu</h2>
+        <MenuNav
+          state={state}
+          onPizzaClick={onPizzaClickHanlder}
+          onPastaClick={onPastaClickHanlder}
+          onInsalataClick={onInsalataClickHanlder}
+        />
+
+        {state.menu === "Pizza" && <Pizza />}
+        {state.menu === "PastaRisotto" && <PastaRisotto />}
+        {state.menu === "Insalata" && <Insalate />}
       </div>
-      <MenuNav
-        state={state}
-        onPizzaClick={onPizzaClickHanlder}
-        onPastaClick={onPastaClickHanlder}
-        onInsalataClick={onInsalataClickHanlder}
-      />
-      <p>State: {state.menu}</p>
-      {state.menu === "Pizza" && <Pizza />}
-      {state.menu === "PastaRisotto" && <PastaRisotto />}
-      {state.menu === "Insalata" && <Insalate />}
     </section>
   );
 };
