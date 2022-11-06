@@ -1,8 +1,11 @@
 import styles from "./NavLinks.module.css";
 
+import Logo from "../UI/Logo";
+
 const NavLinks = (props) => {
   return (
     <>
+      {/* <Logo /> */}
       <ul className={styles.nav__items}>
         <li>
           <a href="" className={styles.nav__link}>

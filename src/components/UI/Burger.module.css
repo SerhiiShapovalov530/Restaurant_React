@@ -9,9 +9,9 @@
   cursor: pointer;
 }
 
-.nav__bureger--active {
+/* .nav__bureger--active {
   background-color: yellow;
-}
+} */
 
 .bar {
   position: absolute;

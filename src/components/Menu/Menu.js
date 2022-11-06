@@ -2,8 +2,9 @@ import { useReducer } from "react";
 import styles from "./Menu.module.css";
 
 import Pizza from "./Components/Pizza";
-import Insalate from "./Components/Insalate";
+import StartersSoupsSalads from "./Components/StartersSoupsSalads";
 import PastaRisotto from "./Components/PastaRisotto";
+import Desserts from "./Components/Desserts";
 
 import MenuNav from "./MenuNav";
 
@@ -17,6 +18,8 @@ const reducer = (state, action) => {
       return { ...state, menu: "PastaRisotto" };
     case "Insalata":
       return { ...state, menu: "Insalata" };
+    case "Desserts":
+      return { ...state, menu: "Desserts" };
       break;
     default:
       console.log("Sorry");
@@ -27,21 +30,21 @@ const Menu = () => {
   const [state, dispach] = useReducer(reducer, initialState);
 
   const onPizzaClickHanlder = () => {
-    console.log("Pizza Click!");
     dispach({ type: "Pizza" });
     console.log("state:", state);
   };
 
   const onPastaClickHanlder = () => {
-    console.log("Pasta Click!");
     dispach({ type: "PastaRisotto" });
     console.log("state:", state);
   };
 
   const onInsalataClickHanlder = () => {
-    console.log("Insalata Click!");
     dispach({ type: "Insalata" });
     console.log("state:", state);
+  };
+  const onDesertsClickHanlder = () => {
+    dispach({ type: "Desserts" });
   };
 
   return (
@@ -53,11 +56,13 @@ const Menu = () => {
           onPizzaClick={onPizzaClickHanlder}
           onPastaClick={onPastaClickHanlder}
           onInsalataClick={onInsalataClickHanlder}
+          onDessertsClick={onDesertsClickHanlder}
         />
 
         {state.menu === "Pizza" && <Pizza />}
         {state.menu === "PastaRisotto" && <PastaRisotto />}
-        {state.menu === "Insalata" && <Insalate />}
+        {state.menu === "Insalata" && <StartersSoupsSalads />}
+        {state.menu === "Desserts" && <Desserts />}
       </div>
     </section>
   );

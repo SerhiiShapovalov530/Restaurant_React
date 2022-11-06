@@ -15,7 +15,7 @@ const Booking = () => {
 
   return (
     <>
-      <section className="section">
+      <section className="section section--3">
         <h1 className={styles.heading}>Book a table</h1>
         <form action="" className={styles.book}>
           <DatePicker

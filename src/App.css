@@ -37,11 +37,16 @@
   background-color: #161616;
 }
 
+.section.section--3 {
+  height: 70vh;
+}
+
 .section--2 {
   background-color: #fffffd;
 }
 
 .content__container {
+  width: 100vw;
   max-width: 1160px;
 }
 

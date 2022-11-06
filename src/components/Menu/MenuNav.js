@@ -1,8 +1,5 @@
 import styles from "./Navigation.module.css";
 
-import Pizza from "./Components/Pizza";
-import PastaRisotto from "./Components/PastaRisotto";
-
 const MenuNav = (props) => {
   return (
     <>
@@ -42,6 +39,18 @@ const MenuNav = (props) => {
               onClick={props.onInsalataClick}
             >
               Insalata
+            </span>
+          </li>
+          <li className={styles.menu__item}>
+            <span
+              className={
+                props.state.menu === "Desserts"
+                  ? styles["item__name--active"]
+                  : styles.item__name
+              }
+              onClick={props.onDessertsClick}
+            >
+              Desserts
             </span>
           </li>
         </ul>

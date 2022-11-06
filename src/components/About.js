@@ -8,7 +8,8 @@ const About = () => {
         <div className={styles.about}>
           <div className={styles.about__text}>
             <p className={styles.text}>
-              <span>About us... </span>
+              <span className={styles.text__aboutus}>About us... </span>
+              <br />
               Ti Amo, Pizza, is a new, exclusive venue on the culinary map of
               Krakow. We love simple Italian cuisine based on original
               ingredients. We are fans of modern, live music. We savour the

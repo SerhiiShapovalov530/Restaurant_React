@@ -6,12 +6,12 @@
 
 .logo {
   font-size: 2em;
-  background-image: url("../../assets/textbgi.PNG");
+  /* background-image: url("../../assets/textbgi.PNG");
   background-size: cover;
-  /* background-repeat: repeat; */
+
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 @media screen and (min-width: 1024px) {

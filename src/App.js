@@ -18,13 +18,12 @@ function App() {
     <>
       <div className="wrapper">
         <section id="section section--1" className="section section--1">
-          <div className="content__container">
-            <Burger
-              onActivation={moblieNavHandler}
-              mobileNavActive={mobileNavActive}
-            />
-            <Navigation mobileNavActive={mobileNavActive} />
-          </div>
+          <Burger
+            onActivation={moblieNavHandler}
+            mobileNavActive={mobileNavActive}
+          />
+          <Navigation mobileNavActive={mobileNavActive} />
+
           <div className="content__container">
             <Main />
             <ScrollIcon />

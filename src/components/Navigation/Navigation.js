@@ -8,17 +8,19 @@ import SocialLinks from "./SocialLinks";
 const Navigation = (props) => {
   return (
     <>
-      <nav
-        className={
-          props.mobileNavActive
-            ? `${styles.nav} ${styles.nav__active}`
-            : `${styles.nav} ${styles.nav__inactive}`
-        }
-      >
-        <Logo />
-        <NavLinks />
-        <SocialLinks />
-      </nav>
+      <div className={styles.nav__bar}>
+        <nav
+          className={
+            props.mobileNavActive
+              ? `${styles.nav} ${styles.nav__active}`
+              : `${styles.nav} ${styles.nav__inactive}`
+          }
+        >
+          <Logo />
+          <NavLinks />
+          <SocialLinks />
+        </nav>
+      </div>
     </>
   );
 };
