@@ -31,12 +31,9 @@ const Booking = () => {
             <div className={styles.book__peopleTime}>
               <TimePeoplePicker />
             </div>
-            <button className={styles.btn}>Reserve</button>
+            <button className={`${styles.btn} btn`}>Reserve</button>
           </div>
         </form>
-        <div className={styles.waiting__list}>
-          <p>Sign up for the waiting list</p>
-        </div>
       </section>
     </>
   );

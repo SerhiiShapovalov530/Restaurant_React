@@ -48,9 +48,9 @@ const Menu = () => {
   };
 
   return (
-    <section className={`section section--3 ${styles["section--3"]}`}>
+    <section className={`section section--4 ${styles["section--4"]}`}>
       <div className="content__container">
-        <h2 className={`heading ${styles.menu}`}>Menu</h2>
+        <h2 className={` ${styles.menu}`}>Menu</h2>
         <MenuNav
           state={state}
           onPizzaClick={onPizzaClickHanlder}

@@ -5,14 +5,7 @@ option {
 
 .btn {
   width: 100%;
-  padding: 5% 0;
   margin: 5% 0;
-  border: 2px solid white;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  background-color: transparent;
-  transition: 0.2s;
-  cursor: pointer;
 }
 
 .btn:hover {

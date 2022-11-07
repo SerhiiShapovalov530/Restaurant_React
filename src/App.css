@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .logo,
@@ -22,9 +24,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* width: 100vw; */
-
   overflow: hidden;
+}
+
+.section--1,
+.section--3,
+.section--5 {
+  color: white;
 }
 
 .section {
@@ -37,12 +43,37 @@
   background-color: #161616;
 }
 
-.section.section--3 {
-  height: 70vh;
+.section--1 {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 98%);
+}
+.section--1--active {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.section--3 {
+  clip-path: polygon(0% 10%, 100% 2%, 100% 90%, 0% 98%);
+}
+.section--5 {
+  clip-path: polygon(0% 10%, 100% 2%, 100% 100%, 0% 100%);
 }
 
-.section--2 {
+.section.section--2,
+.section.section--4 {
   background-color: #fffffd;
+}
+
+.section.section--3 {
+  padding: 10% 0;
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section.section--4,
+.section.section--5 {
+  height: auto;
 }
 
 .content__container {
@@ -51,15 +82,17 @@
 }
 
 .btn {
-  width: 100%;
   padding: 5% 0;
-  margin: 5% 0;
+
   border: 2px solid white;
   font-weight: bold;
   letter-spacing: 0.5px;
   background-color: transparent;
   transition: 0.2s;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
 }
 
 .btn:hover {
@@ -67,6 +100,14 @@
   background-color: white;
 }
 
-input {
-  background-color: black;
-}
+/* @media screen and (min-width: 1024px) {
+  .section--1 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 95%);
+  }
+  .section--3 {
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+  }
+  .section--5 {
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 95%);
+  }
+} */

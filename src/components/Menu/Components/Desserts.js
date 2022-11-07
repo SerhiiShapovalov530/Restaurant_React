@@ -3,7 +3,7 @@ import styles from "./MenuCard.module.css";
 const Desserts = () => {
   return (
     <>
-      <h1 className={styles.name}>Desserts</h1>
+      {/* <h1 className={styles.name}>Desserts</h1> */}
       <div className={styles.menu__items}>
         <div className={styles.menu__column}>
           <div className={styles.menu__item}>

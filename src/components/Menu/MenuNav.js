@@ -38,7 +38,7 @@ const MenuNav = (props) => {
               }
               onClick={props.onInsalataClick}
             >
-              Insalata
+              Starters/Soups/Salads
             </span>
           </li>
           <li className={styles.menu__item}>

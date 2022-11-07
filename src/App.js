@@ -7,6 +7,7 @@ import ScrollIcon from "./components/UI/ScrollIcon";
 import About from "./components/About";
 import Booking from "./components/Booking/Booking";
 import Menu from "./components/Menu/Menu";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [mobileNavActive, setMobileMenuActive] = useState(false);
@@ -17,7 +18,14 @@ function App() {
   return (
     <>
       <div className="wrapper">
-        <section id="section section--1" className="section section--1">
+        <section
+          id="section section--1"
+          className={
+            !mobileNavActive
+              ? "section section--1"
+              : "section section--1--active"
+          }
+        >
           <Burger
             onActivation={moblieNavHandler}
             mobileNavActive={mobileNavActive}
@@ -33,6 +41,7 @@ function App() {
         <About />
         <Booking />
         <Menu />
+        <Footer />
       </div>
     </>
   );

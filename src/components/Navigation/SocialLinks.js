@@ -10,9 +10,18 @@ import {
 const SocialLinks = () => {
   return (
     <div className={styles.nav__socials}>
-      <FontAwesomeIcon icon={faFacebook} />
-      <FontAwesomeIcon icon={faInstagram} />
-      <FontAwesomeIcon icon={faPinterest} />
+      <a href="#" className={styles.socials__link}>
+        {" "}
+        <FontAwesomeIcon icon={faFacebook} />
+      </a>
+      <a href="#" className={styles.socials__link}>
+        {" "}
+        <FontAwesomeIcon icon={faInstagram} />
+      </a>
+      <a href="#" className={styles.socials__link}>
+        {" "}
+        <FontAwesomeIcon icon={faPinterest} />
+      </a>
     </div>
   );
 };

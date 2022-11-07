@@ -6,6 +6,10 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10%;
+  font-size: 2em;
+}
+.socials__link {
+  color: white;
 }
 
 @media screen and (min-width: 1024px) {

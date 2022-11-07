@@ -1,7 +1,7 @@
 .scroll__container {
   position: absolute;
   left: 50%;
-  top: 90%;
+  top: 88%;
 }
 
 .chevron {
@@ -30,7 +30,8 @@
   top: 0;
   height: 100%;
   width: 51%;
-  background: #fff;
+  /* background: #fff; */
+  background: green;
 }
 
 .chevron:before {

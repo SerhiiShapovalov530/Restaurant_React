@@ -1,5 +1,6 @@
 .name {
   text-align: center;
+  margin-top: 5%;
 }
 
 .menu__items {
@@ -8,6 +9,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 .menu__column {

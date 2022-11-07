@@ -10,6 +10,8 @@
   background-position: center;
   background-size: cover;
   max-width: 1200px;
+
+  clip-path: polygon(0% 10%, 100% 2%, 100% 90%, 0% 98%);
 }
 
 .about__text {
