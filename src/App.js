@@ -6,6 +6,7 @@ import Main from "./components/Main";
 import ScrollIcon from "./components/UI/ScrollIcon";
 import About from "./components/About";
 import Booking from "./components/Booking/Booking";
+// import UserDataForm from "./components/Booking/UserDataForm";
 import Menu from "./components/Menu/Menu";
 import Footer from "./components/Footer/Footer";
 
@@ -40,6 +41,7 @@ function App() {
 
         <About />
         <Booking />
+        {/* <UserDataForm /> */}
         <Menu />
         <Footer />
       </div>

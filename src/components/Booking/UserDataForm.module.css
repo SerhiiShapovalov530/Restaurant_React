@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-back {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 5%;
+}
+.booking__data {
+  text-align: center;
+}
+.columns {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__label {
+  font-weight: bold;
+  margin: 2% 0;
+}
+
+.btn {
+  border-color: black;
+  color: black;
+  width: 70%;
+}
+
+.btn-back {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0 0 3% 3%;
+}
+
+@media screen and (min-width: 1024px) {
+  .columns {
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 800px;
+    width: 100%;
+    /* min-height: 50vh;
+        padding: 5%; */
+  }
+
+  .btn {
+    width: 20%;
+
+    padding: 2% 0%;
+  }
+}
