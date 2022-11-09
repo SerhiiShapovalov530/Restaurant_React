@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BookingProvider from "./store/BookingProvider";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Burger from "./components/UI/Burger";
@@ -40,7 +41,9 @@ function App() {
         </section>
 
         <About />
-        <Booking />
+        <BookingProvider>
+          <Booking />
+        </BookingProvider>
         {/* <UserDataForm /> */}
         <Menu />
         <Footer />

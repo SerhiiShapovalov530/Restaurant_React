@@ -1,16 +1,23 @@
+import { useContext } from "react";
+import BookingContolContext from "../../store/bookingContolContext";
+
 import styles from "./TimePeoplePicker.module.css";
 
 const TimePeoplePicker = (props) => {
+  const bookingCtx = useContext(BookingContolContext);
+
   return (
     <>
       <div className={styles.picker}>
         <div className={styles.column}>
           <label htmlFor="">No. of people:</label>
-          <select id="people-box-select">
+          <select
+            id="people-box-select"
+            value={bookingCtx.noOfCustomers}
+            onChange={bookingCtx.noCustomersHandler}
+          >
             <option value="1">1 person </option>
-            <option value="2" selected="">
-              2 people
-            </option>
+            <option value="2">2 people</option>
             <option value="3">3 people </option>
             <option value="4">4 people </option>
             <option value="5">5 people </option>
@@ -22,7 +29,11 @@ const TimePeoplePicker = (props) => {
         </div>
         <div className={styles.column}>
           <label htmlFor="">Time:</label>
-          <select id="hour-box-select">
+          <select
+            id="hour-box-select"
+            value={bookingCtx.time}
+            onChange={bookingCtx.timeHandler}
+          >
             <option value="-1" disabled="">
               Select
             </option>

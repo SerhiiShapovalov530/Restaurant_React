@@ -33,26 +33,25 @@
 }
 
 .btn {
-  border-color: black;
-  color: black;
   width: 70%;
 }
 
 .btn-back {
+  color: white;
   font-weight: bold;
   font-size: 1.1em;
   margin: 0 0 3% 3%;
 }
+.btn-back:hover {
+  color: darkcyan;
+}
 
 @media screen and (min-width: 1024px) {
   .columns {
-    /* display: flex; */
     flex-direction: row;
     justify-content: space-around;
     max-width: 800px;
     width: 100%;
-    /* min-height: 50vh;
-        padding: 5%; */
   }
 
   .btn {
