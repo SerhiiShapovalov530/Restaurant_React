@@ -8,7 +8,6 @@ const BookingProvider = (props) => {
 
   const dateHandler = (date) => {
     setDate(date);
-    console.log("Provider:", date);
   };
   const timeHandler = (e) => {
     const value = e.target.value;

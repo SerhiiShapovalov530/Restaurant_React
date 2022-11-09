@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.header__nav {
+  width: 100%;
+}
+
 .btn-back {
   background: transparent;
   border: none;
@@ -44,6 +48,7 @@
 }
 .btn-back:hover {
   color: darkcyan;
+  align-self: flex-start;
 }
 
 @media screen and (min-width: 1024px) {
@@ -52,6 +57,9 @@
     justify-content: space-around;
     max-width: 800px;
     width: 100%;
+  }
+  .header__nav {
+    max-width: 800px;
   }
 
   .btn {

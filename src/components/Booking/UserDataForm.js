@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import BookingContolContext from "../../store/bookingContolContext";
 
 import styles from "./UserDataForm.module.css";
 
-// Propos -> recieve booking data/time/number of peoples
-
 const UserDataForm = (props) => {
+  const bookingCtx = useContext(BookingContolContext);
   const [allergies, setAllergies] = useState(false);
+  const day = bookingCtx.date.getDate();
+  const month = bookingCtx.date.getMonth() + 1;
+  const year = bookingCtx.date.getFullYear();
 
   const handleAllergiesClick = () => {
     setAllergies((allergies) => !allergies);
@@ -13,11 +16,14 @@ const UserDataForm = (props) => {
 
   return (
     <>
-      <div>
+      <div className={styles.header__nav}>
         <button className={styles["btn-back"]} onClick={props.onBackHandler}>
           <span>&#8592;</span> Back
         </button>
-        <p className={styles.booking__data}>09-11-2022 | 16:00 h | 2 people</p>
+        <p className={styles.booking__data}>
+          {`${day}-${month}-${year}`}| {bookingCtx.time} h |{" "}
+          {bookingCtx.noOfCustomers} people
+        </p>
       </div>
       <form action="" className={styles.form}>
         <div className={styles.columns}>
