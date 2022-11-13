@@ -51,6 +51,12 @@
   align-self: flex-start;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 1024px) {
   .columns {
     flex-direction: row;

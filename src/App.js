@@ -44,7 +44,7 @@ function App() {
         <BookingProvider>
           <Booking />
         </BookingProvider>
-        {/* <UserDataForm /> */}
+
         <Menu />
         <Footer />
       </div>

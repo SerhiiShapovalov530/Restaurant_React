@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { addDays } from "date-fns";
 import DatePicker from "react-datepicker";
 import BookingContolContext from "../../store/bookingContolContext";
@@ -12,32 +12,36 @@ const BookingDetailsForm = (props) => {
 
   const startDate = bookingCtx.date;
   const dateHandler = bookingCtx.dateHandler;
-  const minDate = new Date().toLocaleString().slice(0, 10);
+
+  const formSumissionHandler = (e) => {
+    console.log("click");
+    e.preventDefault();
+  };
 
   return (
-    <form action="" className={styles.book}>
+    <form action="submit" className={styles.book}>
       <DatePicker
         selected={startDate}
         onChange={dateHandler}
         dateFormat="dd/MM/yyyy"
         placeholderText="Select a date"
-        maxDate={addDays(new Date(), 30)}
+        maxDate={addDays(new Date(), 25)}
         minDate={new Date()}
         inline
       />
       <div className={styles["book__peopleTime-container"]}>
         <div className={styles.book__peopleTime}>
-          <TimePeoplePicker
-          // selectNoOfCustomers={props.onSelectNoOfCustomers}
-          // noOfCustomers={props.noOfCustomers}
-          />
+          <TimePeoplePicker />
         </div>
-        <button
-          className={`${styles.btn} btn`}
-          onClick={props.onValidateHandler}
-        >
-          Reserve
-        </button>
+
+        {bookingCtx.isBookingAvaliable && (
+          <button
+            className={`${styles.btn} btn`}
+            onClick={props.onValidateHandler}
+          >
+            Reserve
+          </button>
+        )}
       </div>
     </form>
   );

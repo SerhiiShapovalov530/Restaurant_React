@@ -21,13 +21,13 @@ const UserDataForm = (props) => {
           <span>&#8592;</span> Back
         </button>
         <p className={styles.booking__data}>
-          {`${day}-${month}-${year}`}| {bookingCtx.time} h |{" "}
+          {`${day}-${month}-${year}`} | {bookingCtx.time} h |{" "}
           {bookingCtx.noOfCustomers} people
         </p>
       </div>
       <form action="" className={styles.form}>
         <div className={styles.columns}>
-          <div className={styles.column}>
+          <div>
             <div className={styles.input}>
               <label className={styles.input__label}>First Name</label>
               <input type="text" />
