@@ -38,6 +38,17 @@
 
 .btn {
   width: 70%;
+  margin-bottom: 10%;
+}
+
+.btn:disabled {
+  border-color: gray;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background-color: transparent;
 }
 
 .btn-back {
@@ -57,6 +68,21 @@
   justify-content: space-between;
 }
 
+.invalid {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid :focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.error-text {
+  color: #b40e0e;
+  margin: 2% 0;
+}
+
 @media screen and (min-width: 1024px) {
   .columns {
     flex-direction: row;
@@ -70,6 +96,8 @@
 
   .btn {
     width: 20%;
+
+    margin-bottom: 0%;
 
     padding: 2% 0%;
   }

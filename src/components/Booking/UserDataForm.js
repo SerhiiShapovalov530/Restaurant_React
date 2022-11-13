@@ -1,17 +1,65 @@
 import { useState, useContext } from "react";
 import BookingContolContext from "../../store/bookingContolContext";
+import useInput from "../../hooks/use-inputs";
 
 import styles from "./UserDataForm.module.css";
 
 const UserDataForm = (props) => {
+  let formIsValid = false;
+  const {
+    value: enteredName,
+    isValid: enteredNameIsValid,
+    hasError: nameInputHasError,
+    valueChangeHandler: nameChangeHandler,
+    inputBlurHander: nameBlurHandler,
+    reset: resetName,
+  } = useInput((value) => value.trim() !== "");
+
+  const {
+    value: enteredLastName,
+    isValid: enteredLastNameIsValid,
+    hasError: lastNameInputHasError,
+    valueChangeHandler: lastNameChangeHandler,
+    inputBlurHander: lastNameBlurHandler,
+    reset: resetLastName,
+  } = useInput((value) => value.trim() !== "");
+
+  const {
+    value: enteredEmail,
+    isValid: enteredEmailIsValid,
+    hasError: emailInputHasError,
+    valueChangeHandler: emailChangeHandler,
+    inputBlurHander: emailBlurHandler,
+    reset: resetEmail,
+  } = useInput((value) => value.length > 3 && value.includes("@"));
+
   const bookingCtx = useContext(BookingContolContext);
+
   const [allergies, setAllergies] = useState(false);
+
   const day = bookingCtx.date.getDate();
   const month = bookingCtx.date.getMonth() + 1;
   const year = bookingCtx.date.getFullYear();
-
   const handleAllergiesClick = () => {
     setAllergies((allergies) => !allergies);
+  };
+
+  if (enteredEmailIsValid && enteredLastNameIsValid && enteredNameIsValid) {
+    formIsValid = true;
+  }
+
+  const dataHandler = (e) => {
+    e.preventDefault();
+    console.log(
+      day,
+      month,
+      year,
+      bookingCtx.time,
+      bookingCtx.noOfCustomers,
+      enteredEmail,
+      enteredName,
+      enteredLastName
+    );
   };
 
   return (
@@ -30,17 +78,48 @@ const UserDataForm = (props) => {
           <div>
             <div className={styles.input}>
               <label className={styles.input__label}>First Name</label>
-              <input type="text" />
+              <input
+                className={`${nameInputHasError ? styles.invalid : null}`}
+                type="text"
+                id="name"
+                onChange={nameChangeHandler}
+                onBlur={nameBlurHandler}
+                value={enteredName}
+              />
+              {nameInputHasError && (
+                <p className={styles["error-text"]}>Name must not be empty</p>
+              )}
             </div>
             <div className={styles.input}>
               <label className={styles.input__label}>Last Name</label>
-              <input type="text" />
+              <input
+                className={`${lastNameInputHasError ? styles.invalid : null}`}
+                type="text"
+                id="lastName"
+                onChange={lastNameChangeHandler}
+                onBlur={lastNameBlurHandler}
+                value={enteredLastName}
+              />
             </div>
+            {lastNameInputHasError && (
+              <p className={styles["error-text"]}>
+                Last name must not be empty
+              </p>
+            )}
           </div>
           <div className={styles.column}>
             <div className={styles.input}>
               <label className={styles.input__label}>Email</label>
-              <input type="email" />
+              <input
+                className={`${emailInputHasError ? styles.invalid : null}`}
+                type="email"
+                onChange={emailChangeHandler}
+                onBlur={emailBlurHandler}
+                value={enteredEmail}
+              />
+              {emailInputHasError && (
+                <p className={styles["error-text"]}>Email is not correct</p>
+              )}
             </div>
             <div className={styles["input--inline"]}>
               <label htmlFor="allergies">Intolerances or allergies?</label>
@@ -59,7 +138,13 @@ const UserDataForm = (props) => {
             )}
           </div>
         </div>
-        <button className={`btn ${styles.btn}`}>Reserve</button>
+        <button
+          className={`btn ${styles.btn}`}
+          disabled={!formIsValid}
+          onClick={dataHandler}
+        >
+          Reserve
+        </button>
       </form>
     </>
   );
