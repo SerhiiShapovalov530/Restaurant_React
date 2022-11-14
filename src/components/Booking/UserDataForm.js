@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import BookingContolContext from "../../store/bookingContolContext";
 import useInput from "../../hooks/use-inputs";
+import Modal from "../UI/Modal";
 
 import styles from "./UserDataForm.module.css";
 
@@ -36,6 +37,19 @@ const UserDataForm = (props) => {
   const bookingCtx = useContext(BookingContolContext);
 
   const [allergies, setAllergies] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const modalHandler = () => {
+    setShowModal((modal) => !modal);
+  };
+
+  const backBtnHandler = () => {
+    if (enteredName !== "" || enteredEmail !== "" || enteredLastName !== "") {
+      modalHandler();
+    } else {
+      props.onBackHandler();
+    }
+  };
 
   const day = bookingCtx.date.getDate();
   const month = bookingCtx.date.getMonth() + 1;
@@ -50,22 +64,22 @@ const UserDataForm = (props) => {
 
   const dataHandler = (e) => {
     e.preventDefault();
-    console.log(
-      day,
-      month,
-      year,
-      bookingCtx.time,
-      bookingCtx.noOfCustomers,
-      enteredEmail,
-      enteredName,
-      enteredLastName
-    );
+
+    resetName();
+    resetLastName();
+    resetEmail();
   };
 
   return (
     <>
+      {showModal && (
+        <Modal
+          onbackHandler={props.onBackHandler}
+          onModalHandler={modalHandler}
+        />
+      )}
       <div className={styles.header__nav}>
-        <button className={styles["btn-back"]} onClick={props.onBackHandler}>
+        <button className={styles["btn-back"]} onClick={backBtnHandler}>
           <span>&#8592;</span> Back
         </button>
         <p className={styles.booking__data}>

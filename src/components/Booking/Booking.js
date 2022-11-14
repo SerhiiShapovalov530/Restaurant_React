@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
+
 import BookingContolContext from "../../store/bookingContolContext";
 
 import BookingDetailsForm from "./BookingDetailsForm";
 import UserDataForm from "./UserDataForm";
 import { date as curDate } from "../../helpers/schedule";
+import Modal from "../UI/Modal";
 
 import styles from "./Booking.module.css";
 
@@ -22,7 +24,6 @@ const Booking = () => {
   };
   const backHandler = () => {
     setIsValid(false);
-
     bookingCtx.resetTime();
   };
 

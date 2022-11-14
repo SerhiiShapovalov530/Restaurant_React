@@ -10,6 +10,7 @@ import Booking from "./components/Booking/Booking";
 // import UserDataForm from "./components/Booking/UserDataForm";
 import Menu from "./components/Menu/Menu";
 import Footer from "./components/Footer/Footer";
+// import Modal from "./components/UI/Modal";
 
 function App() {
   const [mobileNavActive, setMobileMenuActive] = useState(false);
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <div className="wrapper">
+        {/* <Modal /> */}
         <section
           id="section section--1"
           className={
