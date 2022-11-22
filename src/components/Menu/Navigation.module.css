@@ -6,8 +6,7 @@
 }
 
 .item__name--active {
-  text-decoration: underline;
-  color: red;
+  color: rgba(164, 143, 111);
 }
 
 .menu__items {

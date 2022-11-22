@@ -8,7 +8,7 @@ const Desserts = () => {
         <div className={styles.menu__column}>
           <div className={styles.menu__item}>
             <div className={styles.item__details}>
-              <div className={styles.item__name}>Boccanera</div>
+              <div className={styles.item__name}>Mama Toscana</div>
               <div className={styles.item__price}>$32</div>
             </div>
 

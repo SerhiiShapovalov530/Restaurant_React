@@ -18,7 +18,7 @@
 }
 
 .nav__link:hover {
-  color: red;
+  color: rgb(189, 174, 151);
 }
 
 @media screen and (min-width: 1024px) {
@@ -28,5 +28,6 @@
   }
   .nav__link {
     font-size: 1em;
+    color: rgba(164, 143, 111);
   }
 }

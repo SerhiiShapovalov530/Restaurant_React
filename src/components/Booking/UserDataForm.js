@@ -32,7 +32,11 @@ const UserDataForm = (props) => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHander: emailBlurHandler,
     reset: resetEmail,
-  } = useInput((value) => value.length > 3 && value.includes("@"));
+  } = useInput((value) => {
+    const validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (value.match(validRegex)) return value;
+  });
 
   const bookingCtx = useContext(BookingContolContext);
 
@@ -63,7 +67,19 @@ const UserDataForm = (props) => {
   }
 
   const dataHandler = (e) => {
+    const data = {};
+
     e.preventDefault();
+    const URL = "http://localhost:3000/";
+    // fetch(URL, {
+    //   method: "POST",
+    //   body: JSON.stringify(),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+
+    // Reset inputs
 
     resetName();
     resetLastName();
@@ -136,7 +152,9 @@ const UserDataForm = (props) => {
               )}
             </div>
             <div className={styles["input--inline"]}>
-              <label htmlFor="allergies">Intolerances or allergies?</label>
+              <label htmlFor="allergies" className={styles.allergies__label}>
+                Intolerances or allergies?
+              </label>
               <input
                 type="checkbox"
                 name="allergies"

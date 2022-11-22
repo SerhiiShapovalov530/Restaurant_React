@@ -9,12 +9,14 @@ import {
 const Footer = () => {
   return (
     <>
-      <section className="section section--5">
+      <section className="section section--5" id="section--5">
         <footer>
           <div className="content__container">
             <div className={styles.columns}>
               <div className={styles.column}>
-                <h2>Ti Amo, Pizza!</h2>
+                <h2>
+                  <span className="text__color">Ti Amo, Pizza!</span>
+                </h2>
                 <p>St. Mark Street 15, 31-018 Krakow</p>
                 <p>phone: +48 12 422 17 08</p>
                 <p>email: email@tiamopizza.pl</p>
@@ -35,7 +37,9 @@ const Footer = () => {
                 </a>
               </div>
               <div className={styles.column}>
-                <h2>Italian cuisine</h2>
+                <h2>
+                  <span className="text__color">Italian cuisine</span>
+                </h2>
                 <p>
                   Ti Amo, Pizza! is a new, exclusive venue on the culinary map
                   of Krakow. The restaurant is located in the heart of Krakow,

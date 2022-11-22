@@ -1,6 +1,7 @@
 .name {
   text-align: center;
   margin-top: 5%;
+  font-style: italic;
 }
 
 .menu__items {
@@ -28,8 +29,16 @@
   justify-content: space-between;
 }
 
-.item__name {
+.item__name,
+.item__price {
   margin-bottom: 1%;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+.item__ingredients {
+  font-style: italic;
+  color: rgb(89, 89, 89);
+  /* color: rgba(164, 143, 111); */
 }
 
 @media screen and (min-width: 1024px) {

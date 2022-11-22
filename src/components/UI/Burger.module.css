@@ -1,6 +1,6 @@
 .nav__burger {
   position: fixed;
-  z-index: 3;
+  z-index: 33;
   right: 5%;
   top: 3%;
   height: 26px;
@@ -20,6 +20,7 @@
   height: 4px;
   width: 100%;
   background-color: #fff;
+  background-color: rgba(164, 143, 111);
   border-radius: 2px;
   transition: 0.2s ease-out;
 }

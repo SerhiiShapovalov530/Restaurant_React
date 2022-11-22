@@ -3,10 +3,10 @@ import lasagneImg from "../assets/lasagna-5994612_1920.jpg";
 
 const About = () => {
   return (
-    <section className="section section--2">
-      <div className="content__container">
-        <div className={styles.about}>
-          <div className={styles.about__text}>
+    <section className="section section--2" id="section--2">
+      <div className={styles.about}>
+        <div className={styles.about__text}>
+          <div className="content__container">
             <p className={styles.text}>
               <span className={styles.text__aboutus}>About us... </span>
               <br />
@@ -21,7 +21,6 @@ const About = () => {
               restaurant’s flavours and quality of its interiors.
             </p>
           </div>
-          {/* <img className={styles.img} src={lasagneImg} alt="" /> */}
         </div>
       </div>
     </section>

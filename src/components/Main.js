@@ -1,26 +1,66 @@
 import styles from "./Main.module.css";
-import pizzaImg from "../assets/pizza.png";
+
+import Navigation from "./Navigation/Navigation";
 import pastaImg from "../assets/pizza-3000285_1280.png";
 
-const Main = () => {
+const Main = (props) => {
+  const linkScrollHandler = (e) => {
+    e.preventDefault();
+    const href = e.target.getAttribute("href");
+    console.log(href);
+    document.getElementById(href).scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <div className={styles.main}>
-        <div className={styles.main__columns}>
-          <div className={styles.main__column}>
-            <h1 className={`logo ${styles["logo-main"]}`}>Ti Amo, Pizza!</h1>
+      <section
+        id="section section--1"
+        className={
+          !props.mobileNavActive
+            ? "section section--1"
+            : "section section--1--active"
+        }
+      >
+        <Navigation
+          onActivation={props.onMoblieNavHandler}
+          mobileNavActive={props.mobileNavActive}
+          onLinkScrollHandler={linkScrollHandler}
+        />
 
-            <h2 className={styles.main__intro}>
-              The taste of italy in the ceneter of Cracow
-            </h2>
-            <button className={`${styles.btn} btn`}>Book a table</button>
-            <button className={`${styles.btn} btn`}>Check menu</button>
-          </div>
-          <div className={styles.main__column}>
-            <img className={styles.main__img} src={pastaImg} alt="" />
+        <div className="content__container">
+          <div className={styles.main}>
+            <div className={styles.main__columns}>
+              <div className={styles.main__column}>
+                <h1 className={`logo ${styles["logo-main"]}`}>
+                  Ti Amo, Pizza!
+                </h1>
+
+                <h2 className={styles.main__intro}>
+                  it's not just food, it's an experience!
+                  {/* <span className="text__color">it's an experience!</span> */}
+                </h2>
+                {/* <h2> The taste of italy in the ceneter of Cracow</h2> */}
+                <a
+                  href="section--3"
+                  className={`${styles.btn} btn`}
+                  onClick={linkScrollHandler}
+                >
+                  Book a table
+                </a>
+                <a
+                  href="section--4"
+                  className={`${styles.btn} btn ${styles.btn__menu}`}
+                  onClick={linkScrollHandler}
+                >
+                  Check menu
+                </a>
+              </div>
+              <div className={styles.main__column}>
+                <img className={styles.main__img} src={pastaImg} alt="" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

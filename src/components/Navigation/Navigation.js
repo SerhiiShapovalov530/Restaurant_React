@@ -4,10 +4,15 @@ import styles from "./Navigation.module.css";
 import NavLinks from "./NavLinks";
 import Logo from "../UI/Logo";
 import SocialLinks from "./SocialLinks";
+import Burger from "../UI/Burger";
 
 const Navigation = (props) => {
   return (
     <>
+      <Burger
+        onActivation={props.onActivation}
+        mobileNavActive={props.mobileNavActive}
+      />
       <div className={styles.nav__bar}>
         <nav
           className={
@@ -17,7 +22,7 @@ const Navigation = (props) => {
           }
         >
           <Logo />
-          <NavLinks />
+          <NavLinks onClickScroll={props.onLinkScrollHandler} />
           <SocialLinks />
         </nav>
       </div>

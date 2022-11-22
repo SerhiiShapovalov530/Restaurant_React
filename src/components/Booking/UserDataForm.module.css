@@ -58,7 +58,7 @@
   margin: 0 0 3% 3%;
 }
 .btn-back:hover {
-  color: darkcyan;
+  color: #1d5d90;
   align-self: flex-start;
 }
 
@@ -81,6 +81,11 @@
 .error-text {
   color: #b40e0e;
   margin: 2% 0;
+}
+
+.allergies__label {
+  color: rgba(164, 143, 111);
+  font-size: 0.8em;
 }
 
 @media screen and (min-width: 1024px) {

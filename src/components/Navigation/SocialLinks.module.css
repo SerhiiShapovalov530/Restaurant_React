@@ -9,7 +9,7 @@
   font-size: 2em;
 }
 .socials__link {
-  color: white;
+  color: rgba(164, 143, 111);
 }
 
 @media screen and (min-width: 1024px) {

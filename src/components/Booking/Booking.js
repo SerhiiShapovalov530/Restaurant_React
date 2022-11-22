@@ -29,8 +29,10 @@ const Booking = () => {
 
   return (
     <>
-      <section className="section section--3">
-        <h1 className={styles.heading}>Book a table</h1>
+      <section className="section section--3" id="section--3">
+        <h1 className={styles.heading}>
+          Book a <span className="text__color">table</span>{" "}
+        </h1>
         {!isValid && <BookingDetailsForm onValidateHandler={validateHandler} />}
         {isValid && <UserDataForm onBackHandler={backHandler} />}
       </section>

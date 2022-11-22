@@ -2,16 +2,11 @@
   /* flex-grow: 3; */
   padding: 15% 0 5% 0;
   color: white;
+  /* color: rgba(164, 143, 111); */
 }
 
 .logo {
   font-size: 2em;
-  /* background-image: url("../../assets/textbgi.PNG");
-  background-size: cover;
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 @media screen and (min-width: 1024px) {

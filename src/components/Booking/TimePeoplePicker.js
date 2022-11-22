@@ -69,8 +69,10 @@ const TimePeoplePicker = (props) => {
         inputs
       ) : (
         <p className={styles.message}>
-          Online reservations are off for today. You can book a table for
-          another day.
+          <span className="text__color">
+            Online reservations are off for today. You can book a table for
+            another day.
+          </span>
         </p>
       )}
     </>

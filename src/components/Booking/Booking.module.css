@@ -3,6 +3,19 @@
   margin: 5% 0 10% 0;
 }
 
+.book {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.book__peopleTime-container {
+  width: 70%;
+  max-width: 400px;
+}
+
 .btn:hover {
   color: black;
   background-color: white;
@@ -16,7 +29,7 @@
 
 @media screen and (min-width: 1024px) {
   .book {
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 60%;
@@ -24,9 +37,8 @@
   }
   .book__peopleTime-container {
     height: 100%;
+    width: auto;
 
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     flex-grow: 0.5;

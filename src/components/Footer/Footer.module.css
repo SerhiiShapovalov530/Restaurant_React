@@ -23,7 +23,7 @@
   transition: 0.2s;
 }
 .socials__link:hover {
-  color: red;
+  color: rgba(164, 143, 111);
 }
 
 .column:nth-child(1) {
