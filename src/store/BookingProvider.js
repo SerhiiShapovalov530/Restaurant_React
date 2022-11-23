@@ -11,6 +11,7 @@ const BookingProvider = (props) => {
   const [time, setTime] = useState(avaliableTime);
   const [noOfCustomers, setNoOfCustomers] = useState(1);
   const [isBookingAvaliable, setIsBookingAvaliable] = useState(isAfterHours);
+  const [allergiesDetails, setAllergiesDetails] = useState(null);
 
   const dateHandler = (date) => {
     setDate(date);
@@ -18,7 +19,7 @@ const BookingProvider = (props) => {
   const timeHandler = (e) => {
     const value = e.target.value;
     setTime(value);
-    console.log("TIME:", time);
+    // console.log("TIME:", time);
   };
 
   const resetTime = () => {
@@ -28,11 +29,18 @@ const BookingProvider = (props) => {
   const noCustomersHandler = (e) => {
     const value = e.target.value;
     setNoOfCustomers(value);
-    console.log(noOfCustomers);
+    // console.log("No. of customers", noOfCustomers);
   };
 
   const bookingAvalibilityHandler = (data) => {
     setIsBookingAvaliable(data.length === 0 ? false : true);
+  };
+
+  const allergiesHandler = (e) => {
+    const value = e.target.value;
+
+    setAllergiesDetails(value);
+    console.log("allergiesDetails", allergiesDetails);
   };
 
   const bookingContext = {
@@ -51,6 +59,7 @@ const BookingProvider = (props) => {
     resetTime,
     isBookingAvaliable,
     bookingAvalibilityHandler,
+    allergiesHandler,
   };
   return (
     <BookingContolContext.Provider value={bookingContext}>

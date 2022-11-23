@@ -68,9 +68,11 @@ const UserDataForm = (props) => {
 
   const dataHandler = (e) => {
     const data = {};
+    props.onBooked();
 
     e.preventDefault();
     const URL = "http://localhost:3000/";
+    // data= {}
     // fetch(URL, {
     //   method: "POST",
     //   body: JSON.stringify(),
@@ -165,7 +167,7 @@ const UserDataForm = (props) => {
             {allergies && (
               <div className={styles.input}>
                 <label className={styles.input__label}>Allergies</label>
-                <input type="text" />
+                <input type="text" onChange={bookingCtx.allergiesHandler} />
               </div>
             )}
           </div>

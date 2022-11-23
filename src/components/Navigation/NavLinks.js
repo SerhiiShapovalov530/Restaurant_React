@@ -3,19 +3,16 @@ import styles from "./NavLinks.module.css";
 import Logo from "../UI/Logo";
 
 const NavLinks = (props) => {
-  // const linkScrollHandler = (e) => {
-  //   e.preventDefault();
-  //   const href = e.target.getAttribute("href");
-  //   console.log(href);
-  //   document.getElementById(href).scrollIntoView({ behavior: "smooth" });
-  // };
-
   return (
     <>
       {/* <Logo /> */}
       <ul className={styles.nav__items}>
         <li>
-          <a href="" className={styles.nav__link}>
+          <a
+            href="section--1"
+            className={styles.nav__link}
+            onClick={props.onClickScroll}
+          >
             Home
           </a>
         </li>

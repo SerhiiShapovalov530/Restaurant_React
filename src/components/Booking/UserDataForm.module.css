@@ -58,7 +58,7 @@
   margin: 0 0 3% 3%;
 }
 .btn-back:hover {
-  color: #1d5d90;
+  color: rgba(164, 143, 111);
   align-self: flex-start;
 }
 

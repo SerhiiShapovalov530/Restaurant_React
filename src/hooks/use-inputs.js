@@ -9,6 +9,8 @@ const useInput = (validateValue) => {
 
   const valueChangeHandler = (e) => {
     setEnteredValue(e.target.value);
+
+    // console.log(e.target.id);
   };
 
   const inputBlurHander = (e) => {

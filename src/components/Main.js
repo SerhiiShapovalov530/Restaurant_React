@@ -13,7 +13,7 @@ const Main = (props) => {
   return (
     <>
       <section
-        id="section section--1"
+        id="section--1"
         className={
           !props.mobileNavActive
             ? "section section--1"
