@@ -8,7 +8,7 @@ const Content = (props) => {
       <div className={styles.backdrop}>
         <div className={styles.modal}>
           <header className={styles.header}>
-            <h2>{props.title}Message!</h2>
+            <h2>{props.title}Message</h2>
           </header>
           <div className={styles.content}>
             <p>

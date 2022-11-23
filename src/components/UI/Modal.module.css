@@ -27,7 +27,7 @@
 
 .header {
   width: 100%;
-  background: gray;
+  background: rgba(164, 143, 111);
   padding: 1rem;
 }
 
@@ -51,13 +51,13 @@
 }
 
 .btn {
-  color: black;
-  border-color: black;
+  color: rgba(164, 143, 111);
+  border-color: rgba(164, 143, 111);
   min-width: 30%;
   margin-bottom: 10%;
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: rgba(164, 143, 111);
   color: white;
 }

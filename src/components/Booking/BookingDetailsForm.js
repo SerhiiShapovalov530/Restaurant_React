@@ -14,7 +14,7 @@ const BookingDetailsForm = (props) => {
   const dateHandler = bookingCtx.dateHandler;
 
   const formSumissionHandler = (e) => {
-    console.log("click");
+    // console.log("click");
     e.preventDefault();
   };
 

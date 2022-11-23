@@ -19,3 +19,7 @@
   cursor: pointer;
   font-weight: bold;
 }
+
+.menu__item {
+  margin: 0 2%;
+}

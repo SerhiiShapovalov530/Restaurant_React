@@ -7,7 +7,7 @@ const Main = (props) => {
   const linkScrollHandler = (e) => {
     e.preventDefault();
     const href = e.target.getAttribute("href");
-    console.log(href);
+    // console.log(href);
     document.getElementById(href).scrollIntoView({ behavior: "smooth" });
   };
   return (

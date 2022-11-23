@@ -40,7 +40,7 @@ const BookingProvider = (props) => {
     const value = e.target.value;
 
     setAllergiesDetails(value);
-    console.log("allergiesDetails", allergiesDetails);
+    // console.log("allergiesDetails", allergiesDetails);
   };
 
   const bookingContext = {

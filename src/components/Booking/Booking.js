@@ -18,10 +18,10 @@ const Booking = () => {
 
   const validateHandler = (e) => {
     e.preventDefault();
-    console.log("click");
+    // console.log("click");
 
     if (bookingCtx.date && bookingCtx.time && bookingCtx.noOfCustomers) {
-      console.log("->true<-");
+      // console.log("->true<-");
       setIsValid(true);
     }
   };
@@ -32,7 +32,7 @@ const Booking = () => {
   };
 
   const bookedHandler = () => {
-    console.log("Table is booked");
+    // console.log("Table is booked");
     setIsBooked(true);
   };
 

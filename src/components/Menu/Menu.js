@@ -22,7 +22,7 @@ const reducer = (state, action) => {
       return { ...state, menu: "Desserts" };
       break;
     default:
-      console.log("Sorry");
+      console.log("No match!");
   }
 };
 
@@ -31,17 +31,17 @@ const Menu = () => {
 
   const onPizzaClickHanlder = () => {
     dispach({ type: "Pizza" });
-    console.log("state:", state);
+    // console.log("state:", state);
   };
 
   const onPastaClickHanlder = () => {
     dispach({ type: "PastaRisotto" });
-    console.log("state:", state);
+    // console.log("state:", state);
   };
 
   const onInsalataClickHanlder = () => {
     dispach({ type: "Insalata" });
-    console.log("state:", state);
+    // console.log("state:", state);
   };
   const onDesertsClickHanlder = () => {
     dispach({ type: "Desserts" });
