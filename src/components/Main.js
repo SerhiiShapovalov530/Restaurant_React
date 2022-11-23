@@ -9,6 +9,7 @@ const Main = (props) => {
     const href = e.target.getAttribute("href");
     // console.log(href);
     document.getElementById(href).scrollIntoView({ behavior: "smooth" });
+    props.onMoblieNavHandler();
   };
   return (
     <>
