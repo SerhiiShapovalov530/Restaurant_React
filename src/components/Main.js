@@ -3,14 +3,18 @@ import styles from "./Main.module.css";
 import Navigation from "./Navigation/Navigation";
 import pastaImg from "../assets/pizza-3000285_1280.png";
 
+const getElementAndScroll = (e) => {
+  e.preventDefault();
+  const href = e.target.getAttribute("href");
+  document.getElementById(href).scrollIntoView({ behavior: "smooth" });
+};
+
 const Main = (props) => {
   const linkScrollHandler = (e) => {
-    e.preventDefault();
-    const href = e.target.getAttribute("href");
-    // console.log(href);
-    document.getElementById(href).scrollIntoView({ behavior: "smooth" });
+    getElementAndScroll(e);
     props.onMoblieNavHandler();
   };
+
   return (
     <>
       <section
@@ -43,14 +47,14 @@ const Main = (props) => {
                 <a
                   href="section--3"
                   className={`${styles.btn} btn`}
-                  onClick={linkScrollHandler}
+                  onClick={getElementAndScroll}
                 >
                   Book a table
                 </a>
                 <a
                   href="section--4"
                   className={`${styles.btn} btn ${styles.btn__menu}`}
-                  onClick={linkScrollHandler}
+                  onClick={getElementAndScroll}
                 >
                   Check menu
                 </a>

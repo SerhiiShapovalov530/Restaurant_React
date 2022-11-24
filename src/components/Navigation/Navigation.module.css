@@ -37,6 +37,7 @@
   .nav,
   .nav__inactive,
   .nav__active {
+    position: unset;
     display: flex;
     flex-direction: row;
     height: 10vh;
